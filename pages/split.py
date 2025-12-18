@@ -58,7 +58,7 @@ DATA_PATH = "already_data.csv"
 TARGET_COL = "TB/U"
 
 try:
-    df = pd.read_csv("pages/already_data.csv")
+    df = pd.read_csv("pages/already_data.csv").drop(columns=['Unnamed: 0'])
     st.success("Dataset berhasil dimuat")
     
     with st.expander("🔍 Lihat Dataset"):
