@@ -1,11 +1,23 @@
 import streamlit as st
 
 pages = {
-    "Menu": [
-        st.Page("pages/Modeling.py", title="Upload Data"),
-        st.Page("pages/tes.py", title="tes"),
-        st.Page("pages/Modeling_Split.py", title="Split"),
-    ]
+    "BUSINESS UNDERSTANDING" :[
+
+        st.Page("pages/business_understanding.py", title="BUSINESS UNDERSTANDING"),
+    ],
+    "DATA UNDERSTANDING": [
+        st.Page("pages/data_under.py", title="DATA UNDERSTANDING"),
+        # st.Page("pages/tes.py", title="tes"),
+    ],
+    "DATA PREPARATION" : [
+        st.Page("pages/data_prep.py", title="DATA PREPARATION"),
+        st.Page("pages/split.py", title="SPLIT DATA"),
+    ],
+    " MODELING" : [
+        st.Page("pages/Modeling.py", title="MODELING"),
+    ],
+    "EVALUATION" : [
+        st.Page("pages/evaluasi.py", title="EVALUASI"),]
 }
 
 pg = st.navigation(pages)

@@ -2,6 +2,16 @@
     max-width: 100% !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
-    padding-top: 2rem !important;
+    padding-top: 2.5rem !important;
     padding-bottom: 0rem !important;
+}
+
+div[data-testid="stColumn"]{
+    border-radius: 16px;
+    background: #ffffff;
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+
 }
