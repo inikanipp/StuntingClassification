@@ -52,7 +52,7 @@ with con3 :
         st.subheader("Data Overview")
         st.dataframe(pd.read_csv('pages/data_stunting.csv'))
         st.write("""
-        Dataset ini berasal dari pengukuran balita pada Februari 2024 (pra-intervensi) dan Agustus 2024 (pasca-intervensi) setelah dilakukan program pemberian makanan tambahan dan edukasi gizi.
+        Dataset ini berasal dari pengukuran balita pada Februari 2024 .
         """)
     with col4 :
         st.subheader("Karakteristik Utama Dataset")
