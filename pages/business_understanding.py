@@ -60,7 +60,7 @@ with con3 :
         Sumber data: Pengukuran lapangan tenaga kesehatan
 
         1. Jumlah data: 490 catatan pengukuran
-        2. Periode pengambilan: Februari & Agustus 2024
+        2. Periode pengambilan: Februari 2024
         3. Wilayah: Kabupaten Lombok Timur
         4. Tipe data: Data numerik, Data Kategorikal & label status stunting
         5. Tujuan penggunaan: Klasifikasi status stunting anak

@@ -53,12 +53,12 @@ st.markdown(
 st.divider()
 
 # LOAD DATA
-DATA_PATH = "already_data.csv"
+DATA_PATH = 'pages/after_pre.csv'
 
 TARGET_COL = "TB/U"
 
 try:
-    df = pd.read_csv("pages/already_data.csv").drop(columns=['Unnamed: 0'])
+    df = pd.read_csv(DATA_PATH)
     st.success("Dataset berhasil dimuat")
     
     with st.expander("🔍 Lihat Dataset"):
