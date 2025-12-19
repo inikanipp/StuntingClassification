@@ -32,7 +32,7 @@ if 'accuracy' in st.session_state :
     st.markdown('<div class="overview-section">', unsafe_allow_html=True)
     st.header("📈 Overview")
     st.markdown("""
-    - **Model**: K-Nearest Neighbor (KNN) dengan k=13.
+    - **Model**: K-Nearest Neighbor (KNN) dengan k=11.
     - **Dataset**: Data uji untuk klasifikasi biner (Kelas 0 dan Kelas 1).
     - **Tujuan**: Menganalisis performa model untuk memastikan keakuratan prediksi.
     """)
