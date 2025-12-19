@@ -262,13 +262,14 @@ with tab1:
     # 13. Pemeriksaan Nilai ≤ 0
     st.subheader("13. Pemeriksaan Nilai ≤ 0")
 
-    cols = ['Birth Height','Birth Weight','Height','Weight']
+    cols = ['Birth Height','Birth Weight','Height','Weight', 'Age_Years']
 
     df_invalid = df[
         (df['Birth Height'] <= 0) |
         (df['Birth Weight'] <= 0) |
         (df['Height'] <= 0) |
-        (df['Weight'] <= 0)
+        (df['Weight'] <= 0) |
+        (df['Age_Years'] <= 0)
     ]
 
     if df_invalid.empty:
@@ -331,7 +332,7 @@ with tab1:
 
     st.subheader("18. Transformasi Box-Cox Variabel")
 
-    num_cols_boxcox = ['Birth Weight', 'Birth Height', 'Weight', 'Height']
+    num_cols_boxcox = ['Birth Weight', 'Birth Height', 'Weight', 'Height', 'Age_Years']
     lambda_dict = {}
 
     for col in num_cols_boxcox:
@@ -350,14 +351,14 @@ with tab1:
 
     # Boxplot setelah Box-Cox
     fig, ax = plt.subplots(figsize=(8, 5))
-    df[['Weight', 'Height', 'Birth Weight', 'Birth Height']].boxplot(ax=ax)
+    df[['Weight', 'Height', 'Birth Weight', 'Birth Height', 'Age_Years']].boxplot(ax=ax)
     ax.set_title('Boxplot Weight & Height Setelah Box-Cox')
     st.pyplot(fig)
 
     # Histogram setelah Box-Cox
     st.subheader("📊 Histogram Setelah Box-Cox")
     fig, ax = plt.subplots(figsize=(8, 5))
-    df[['Weight', 'Height', 'Birth Weight', 'Birth Height']].hist(ax=ax)
+    df[['Weight', 'Height', 'Birth Weight', 'Birth Height', 'Age_Years']].hist(ax=ax)
     ax.set_title('Boxplot Weight & Height Setelah Box-Cox')
     st.pyplot(fig)
 
