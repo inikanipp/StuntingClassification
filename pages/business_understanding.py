@@ -24,7 +24,7 @@ with con1 :
         "kognitif, dan meningkatkan risiko penyakit di kemudian hari. Ini bukan sekadar masalah fisik, tapi juga " \
         "gangguan perkembangan jangka panjang. ")
     with col2 :
-        st.image("https://kesmas-id.com/wp-content/uploads/2024/07/Penting-Kenali-Stunting-Sebelum-Terlambat.jpg", width='stretch')
+        st.image("https://kesmas-id.com/wp-content/uploads/2024/07/Penting-Kenali-Stunting-Sebelum-Terlambat.jpg")
 
 with con2 :
     col3, col4 = st.columns([1,1])
