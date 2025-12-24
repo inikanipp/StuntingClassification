@@ -4,6 +4,7 @@ warnings.filterwarnings("ignore")
 import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import SMOTE
 
 
 # STYLE
@@ -59,6 +60,7 @@ TARGET_COL = "TB/U"
 
 try:
     df = pd.read_csv('pages/after_pre.csv').drop(columns=['Unnamed: 0'])
+    # df = st.session_state.x
     st.success("Dataset berhasil dimuat")
     
     with st.expander("🔍 Lihat Dataset"):
@@ -86,7 +88,7 @@ st.divider()
 
 # SPLIT PROCESS
 if st.button("🚀 Proses Split Data"):
-    X = df.drop(columns=[TARGET_COL])
+    X = df.drop(columns=[TARGET_COL, 'BB/U', 'BB/TB'])
     y = df[TARGET_COL]
 
     X_train, X_test, y_train, y_test = train_test_split(
@@ -96,6 +98,12 @@ if st.button("🚀 Proses Split Data"):
         random_state=42,
         stratify=y
     )
+
+    smote = SMOTE(random_state=42)
+    X_train, y_train = smote.fit_resample(X_train, y_train)
+
+
+    st.dataframe(X_train)
 
     st.success("✅ Data berhasil di-split secara stratified")
     col1, col2 = st.columns(2)

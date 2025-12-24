@@ -32,7 +32,7 @@ if 'accuracy' in st.session_state :
     st.markdown('<div class="overview-section">', unsafe_allow_html=True)
     st.header("📈 Overview")
     st.markdown("""
-    - **Model**: K-Nearest Neighbor (KNN) dengan k=11.
+    - **Model**: K-Nearest Neighbor (KNN) dengan k=1.
     - **Dataset**: Data uji untuk klasifikasi biner (Kelas 0 dan Kelas 1).
     - **Tujuan**: Menganalisis performa model untuk memastikan keakuratan prediksi.
     """)
@@ -188,7 +188,7 @@ if 'accuracy' in st.session_state :
         - **F1-Score (67.79%)**: Keseimbangan yang wajar antara precision dan recall.
 
         📌 **Kesimpulan**:  
-        Model KNN (k=13) **layak digunakan** untuk klasifikasi ini, meskipun bisa dioptimalkan lebih lanjut (misalnya, tuning hyperparameter atau preprocessing data).
+        Model KNN (k=1) **layak digunakan** untuk klasifikasi ini, meskipun bisa dioptimalkan lebih lanjut (misalnya, tuning hyperparameter atau preprocessing data).
         """)
     st.markdown('</div>', unsafe_allow_html=True)
 

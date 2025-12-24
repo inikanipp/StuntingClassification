@@ -20,6 +20,7 @@ st.markdown(
 
 # ===== Load model =====
 model = joblib.load("pages/model.pkl")
+minmax = joblib.load("pages/minmax.pkl")
 
 # ===== Lambda Box-Cox values (FROM TRAINING – DO NOT CHANGE) =====
 LBirthWeight = -1.3288
@@ -74,8 +75,12 @@ with right_col:
                 birth_height_bc,
                 weight_bc,
                 height_bc
-            ]])
+            ]])     
+            
 
+            # ======================= transform normalized ===================================
+            input_data = minmax.transform(input_data)
+            # ======================= predict ===================================
             prediction = model.predict(input_data)
 
             label_map = {

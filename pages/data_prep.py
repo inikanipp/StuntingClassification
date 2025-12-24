@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from scipy.stats import boxcox
+from imblearn.over_sampling import SMOTE
+from sklearn.preprocessing import MinMaxScaler
 import os
 
 # 1. Konfigurasi Halaman
@@ -362,6 +364,15 @@ with tab1:
     ax.set_title('Boxplot Weight & Height Setelah Box-Cox')
     st.pyplot(fig)
 
+
+    # Histogram setelah Box-Cox
+    st.subheader("Data Normalization")
+
+    normalization = MinMaxScaler()
+    df[['Weight', 'Height', 'Birth Weight', 'Birth Height', 'Age_Years']] = normalization.fit_transform(df[['Weight', 'Height', 'Birth Weight', 'Birth Height', 'Age_Years']])
+    st.dataframe(df[['Weight', 'Height', 'Birth Weight', 'Birth Height', 'Age_Years', 'TB/U']])
+
+    # st.session_state.df = df[['Weight', 'Height', 'Birth Weight', 'Birth Height', 'Age_Years', 'TB/U']]
 
 with tab2:
     st.header("Modeling Klasifikasi")
