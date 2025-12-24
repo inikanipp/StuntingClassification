@@ -19,7 +19,7 @@ st.markdown(
 )
 
 # ===== Load model =====
-model = joblib.load("pages/model.pkl")
+model = joblib.load("pages/model2.pkl")
 minmax = joblib.load("pages/minmax.pkl")
 
 # ===== Lambda Box-Cox values (FROM TRAINING – DO NOT CHANGE) =====
@@ -70,11 +70,11 @@ with right_col:
 
             # ===== Combine features (ORDER MUST MATCH TRAINING) =====
             input_data = np.array([[
-                age_years,
                 birth_weight_bc,
                 birth_height_bc,
                 weight_bc,
-                height_bc
+                height_bc,
+                age_years
             ]])     
             
 
