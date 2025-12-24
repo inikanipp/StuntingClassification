@@ -139,10 +139,10 @@ if 'accuracy' in st.session_state :
     st.header("📏 Metrik Evaluasi Model")
     st.markdown("Metrik utama model KNN berdasarkan data uji. Hover pada kartu untuk detail.")
 
-    accuracy = 0.7576
-    precision = 0.8182
-    recall = 0.7576
-    f1 = 0.6779
+    accuracy =  0.7878
+    precision = 0.84
+    recall = 0.875
+    f1 = 0.8571
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
